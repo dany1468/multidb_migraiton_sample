@@ -5,7 +5,7 @@ namespace :multi do
     ENV['SCHEMA'] = Rails.root.join("db/schema_#{database}.rb").to_s
 
     Rails.application.config.paths['db/migrate'] = [Rails.root.join("db/migrate_#{database}").to_s]
-    Rails.application.config.paths['db/seeds'] = [Rails.root.join("db/seeds_#{database}").to_s]
+    Rails.application.config.paths['db/seeds.rb'] = [Rails.root.join("db/seeds_#{database}.rb").to_s]
     Rails.application.config.paths['config/database'] = [Rails.root.join("config/database_#{database}.yml").to_s]
   end
 
