@@ -1,13 +1,13 @@
 development:
   adapter: mysql2
-  database: blog_slave
+  database: user_master
   pool: 5
   username: root
   password: root
   timeout: 5000
   collation: utf8_bin
 
-production_blog_master:
+development_blog:
   adapter: mysql2
   database: blog_master
   pool: 5
@@ -15,7 +15,7 @@ production_blog_master:
   password: root
   timeout: 5000
   collation: utf8_bin
-production_blog_slave:
+development_blog_slave:
   adapter: mysql2
   database: blog_slave
   pool: 5
@@ -23,7 +23,24 @@ production_blog_slave:
   password: root
   timeout: 5000
   collation: utf8_bin
-production_user_master:
+test_blog:
+  adapter: mysql2
+  database: blog_master_test
+  pool: 5
+  username: root
+  password: root
+  timeout: 5000
+  collation: utf8_bin
+test_blog_slave:
+  adapter: mysql2
+  database: blog_slave
+  pool: 5
+  username: root
+  password: root
+  timeout: 5000
+  collation: utf8_bin
+
+development_user:
   adapter: mysql2
   database: user_master
   pool: 5
@@ -31,7 +48,7 @@ production_user_master:
   password: root
   timeout: 5000
   collation: utf8_bin
-production_user_slave:
+development_user_slave:
   adapter: mysql2
   database: user_slave
   pool: 5
