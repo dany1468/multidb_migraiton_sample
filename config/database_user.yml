@@ -1,1 +1,1 @@
-<%= MultiDatabaseYaml.slice('blog') %>
+<%= MultiDatabaseYaml.slice('user') %>
