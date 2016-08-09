@@ -8,6 +8,8 @@ namespace :db do
       Rails.application.config.paths['db/migrate'] = [Rails.root.join("db/migrate_#{database}").to_s]
       Rails.application.config.paths['db/seeds.rb'] = [Rails.root.join("db/seeds_#{database}.rb").to_s]
       Rails.application.config.paths['config/database'] = [Rails.root.join("config/database_#{database}.yml").to_s]
+      ActiveRecord::Base.configurations = Rails.application.config.database_configuration
+      ActiveRecord::Base.establish_connection
     end
 
     multi_db_task = ->(name) {
