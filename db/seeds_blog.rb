@@ -5,6 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-puts 'blog create'
 Blog.create(title: 'from seeds', published_at: Time.zone.now)
-puts 'blog finish'
