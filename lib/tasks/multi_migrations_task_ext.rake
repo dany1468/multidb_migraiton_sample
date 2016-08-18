@@ -40,7 +40,7 @@ namespace :db do
     }
 
     %w(drop create purge schema:load migrate rollback seed version
-   schema:dump structure:dump structure:load).each do |task_name|
+   schema:dump).each do |task_name|
       multi_db_task[task_name]
     end
 
