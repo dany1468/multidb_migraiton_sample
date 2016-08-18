@@ -39,7 +39,7 @@ namespace :db do
       end
     }
 
-    %w(drop create purge schema:load migrate reset rollback seed version
+    %w(drop create purge schema:load migrate rollback seed version
    schema:dump structure:dump structure:load).each do |task_name|
       multi_db_task[task_name]
     end
@@ -56,7 +56,7 @@ namespace :db do
         end
       }
 
-      %w(drop create purge schema:load migrate reset seed version
+      %w(drop create purge schema:load migrate seed version
    schema:dump).each do |task_name|
         multi_db_all_task[task_name]
       end
